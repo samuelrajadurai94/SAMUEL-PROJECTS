@@ -1,4 +1,6 @@
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 dk = pd.read_csv('D:\\Downloads\\loan_prediction.csv')
 print(dk.head())
 print(dk.shape)
@@ -43,6 +45,11 @@ dk['Loan_Status'] = lr.fit_transform(dk['Loan_Status'])
 print(dk.head(10))
 print(dk.info())
 print(dk[['ApplicantIncome','CoapplicantIncome']].describe())
+
+# heatmap to see corelation b/w features.
+plt.figure(figsize=(12,6))
+sns.heatmap(dk.corr(),cmap='BrBG',fmt='.2f',linewidths=2,annot=True)
+plt.show()
 
 # Defining feature column and Target column
 x = dk.drop('Loan_Status',axis=1)
@@ -151,7 +158,7 @@ rf_final =RandomForestClassifier(n_estimators=270,
                            max_features='sqrt',
                            max_depth=5)
 rf_final.fit(x,y)
-
+model_acscore(rf_final,x,y)
 
 # save this final model using joblib
 import joblib
