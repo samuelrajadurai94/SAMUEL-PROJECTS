@@ -1,5 +1,5 @@
-# SAMUEL-PROJECTS
-SUPER MARKET SALES PREDICTION:
+# SAMUEL- SUPER MARKET SALES PREDICTION:
+
 The dataset contains daily historical sales data for last 3years. The task is to forecast the total amount of products sold in every shop for the test dataset. 
 I did outlier removal, data cleaning and converted daily sales data into monthly sales data by using pandas groupby and aggregation function. 
 I builded a new data set with all the possible combinations of [‘date_block_num’, ‘shop_id’, ‘item_id’] so we won’t have any missing records. 
