@@ -5,4 +5,3 @@ I Investigated any relationships between annual income and age group.
 I used correlation matrix and chi square test to find relationship between various features. 
 I used one hot encoding to convert categorical data to numerical data. 
 I had used Logistic Regression, Random Forest and GRADIENT Boosting  to train the dataset. Among all the algorithms Gradient boosting Classifier performs best on the validation data with an accuracy score of 90.7%. 
-
